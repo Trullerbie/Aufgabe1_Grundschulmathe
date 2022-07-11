@@ -1,21 +1,25 @@
 //Aufgabe a
 alert("Grundschulmathe");
 
-//Aufgabe b
-//Zwei Zufallszahlen generieren
-const a = Math.floor(Math.random()*20)+1
-const b = Math.floor(Math.random()*20)+1
+//Aufgabe c
+var wiederholung = "";
+var punkte = 0;
 
-//Rechnung abfragen
-let result = prompt(`Wieviel ist ${a} + ${b}?`)
-console.log(result)
+    //Schleife für 5 Durchgänge
+for (var i = 1; i <= 5; i++) {
+  const a = Math.floor(Math.random() * 20) + 1;
+  const b = Math.floor(Math.random() * 20) + 1;
 
-result = parseInt(result, 10)
+  var result = prompt(`Wieviel ist ${a} + ${b}?`);
+  result = parseInt(result, 10);
 
-//Rechnung überprüfen
-if(result === a + b){
-    alert("Richtig");
-}
-else{
-    alert("Falsch");
+    //Überprüfung des Ergebnisses und anzeigen der Punktzahl
+  if (result === a + b) {
+    punkte++;
+    alert("Richtig, deine Punktezahl: " + punkte);
+  } else {
+    alert("Falsch, deine Punktezahl: " + punkte);
+  }
+
+  wiederholung++;
 }
